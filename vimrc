@@ -222,8 +222,8 @@ vnoremap > >gv
 " and ask which one to jump to
 nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
-" Edit vimrc with ,vv
-nmap <Leader>vv :edit ~/.vim/vimrc<CR>
+" Edit vimrc with ,v
+nmap <Leader>v :edit ~/.vim/vimrc<CR>
 
 " Remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
