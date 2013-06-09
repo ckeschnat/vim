@@ -303,6 +303,7 @@ endif
 
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
+" Add variable to disable loading plugins (for root)
 "
 " TODO anschauen
 " set wildmenu
