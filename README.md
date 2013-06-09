@@ -1,5 +1,5 @@
-The vimrc is OS independent. On Windows, rename 'vimfiles' to '.vim'
-(rename it to '.vim.', windows explorer will remove the trailing dot).
+On Windows, rename 'vimfiles' to '.vim' (rename it to '.vim.',
+windows explorer will remove the trailing dot).
 Create a vimrc with the following content:
 
     function! MySys()
