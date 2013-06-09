@@ -296,8 +296,14 @@ if isdirectory($HOME . "/.vim/bundle/vundle")
 endif
 " } end setup Vundle
 
+" Configuration for plugins
+if filereadable($HOME . "/.vim/pluginsrc.vim")
+    source ~/.vim/pluginsrc.vim
+endif
+
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
+"
 " TODO anschauen
 " set wildmenu
 " set wildmode=list:longest:full
