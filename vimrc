@@ -279,7 +279,7 @@ endfunction
 call InitializeDirectories()
 
 " Setup Vundle {
-if isdirectory($HOME . "/.vim/bundle/vundle")
+if isdirectory($HOME . "/.vim/bundle/vundle") && !exists("g:ck_disable_plugins")
     filetype off " required!
     set runtimepath+=~/.vim/bundle/vundle
     call vundle#rc()
@@ -293,17 +293,16 @@ if isdirectory($HOME . "/.vim/bundle/vundle")
     endif
 
     filetype plugin indent on
+
+    " Configuration for plugins
+    if filereadable($HOME . "/.vim/pluginsrc.vim")
+        source ~/.vim/pluginsrc.vim
+    endif
 endif
 " } end setup Vundle
 
-" Configuration for plugins
-if filereadable($HOME . "/.vim/pluginsrc.vim")
-    source ~/.vim/pluginsrc.vim
-endif
-
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
-" Add variable to disable loading plugins (for root)
 "
 " TODO anschauen
 " set wildmenu
