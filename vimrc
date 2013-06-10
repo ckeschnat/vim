@@ -71,6 +71,10 @@ set incsearch
 " display incomplete commands
 set showcmd
 
+" Better tab completion
+set wildmenu
+set wildignore=*.o,*~,*.pyc
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
     " Enable file type detection.
@@ -121,6 +125,9 @@ set smartcase
 
 " Always show status line
 set laststatus=2
+
+" Toggle paste
+set pastetoggle=<F4>
 
 " See http://vimdoc.sourceforge.net/htmldoc/options.html#%27viminfo%27
 set viminfo='1000,f1,<500,s10,h
@@ -304,8 +311,3 @@ endif
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
 "
-" TODO anschauen
-" set wildmenu
-" set wildmode=list:longest:full
-" set wildignore=*.o,*~,*.pyc
-" set pastetoggle=<F12>
