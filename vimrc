@@ -286,7 +286,24 @@ endfunction
 call InitializeDirectories()
 
 " Setup Vundle {
-if isdirectory($HOME . "/.vim/bundle/vundle") && !exists("g:ck_disable_plugins")
+" Install Vundle if it is not present
+let vundle_installed=0
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
+    echo "Installing Vundle..."
+    echo ""
+    call system("git --version")
+    if v:shell_error == 0
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let vundle_installed=1
+    else
+        echo "git not found, cannot install Vundle"
+    endif
+else
+    let vundle_installed=1
+endif
+
+if vundle_installed==1
     filetype off " required!
     set runtimepath+=~/.vim/bundle/vundle
     call vundle#rc()
@@ -310,4 +327,3 @@ endif
 
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
-"
