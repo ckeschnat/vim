@@ -330,6 +330,7 @@ if vundle_installed==1
     endif
 endif
 " } end setup Vundle
+set omnifunc=syntaxcomplete#Complete
 
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
