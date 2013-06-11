@@ -296,6 +296,7 @@ if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
     if v:shell_error == 0
         silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
         let vundle_installed=1
+        let vundle_fresh=1
     else
         echo "git not found, cannot install Vundle"
     endif
@@ -314,6 +315,10 @@ if vundle_installed==1
 
     if filereadable($HOME . "/.vim/bundles.vim")
         source ~/.vim/bundles.vim
+    endif
+
+    if vundle_fresh==1
+        :BundleInstall
     endif
 
     filetype plugin indent on
