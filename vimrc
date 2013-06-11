@@ -288,6 +288,7 @@ call InitializeDirectories()
 " Setup Vundle {
 " Install Vundle if it is not present
 let vundle_installed=0
+let vundle_fresh=0
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
     echo "Installing Vundle..."
