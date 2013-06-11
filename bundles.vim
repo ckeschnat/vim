@@ -1,4 +1,4 @@
-"" Put bundles here
+" Put bundles here
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 " vim-addons-mw-utils and tlib_vim are dependencies for vim-snipmate
@@ -10,11 +10,11 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-repeat'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mhinz/vim-startify.git'
-"Bundle 'scrooloose/nerdcommenter.git'
+" Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'ervandew/supertab'
-"Bundle 'Shougo/neocomplcache.vim'
+" Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Syntastic'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'

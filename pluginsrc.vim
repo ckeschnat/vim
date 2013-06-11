@@ -7,6 +7,9 @@ let g:ctrlp_show_hidden = 1
 " Set completion type for supertab
 let g:SuperTabDefaultCompletionType = "context"
 
+:imap <C-\> <Plug>snipMateNextOrTrigger
+:imap <S-<C-\>> <Plug>snipMateBack
+
 "" neocomplcache
 ""Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 "" Disable AutoComplPop.
