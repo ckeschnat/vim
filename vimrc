@@ -148,7 +148,7 @@ set fileformats=unix,dos
 " Show opening parens
 set showmatch
 " How many tenths of a second to blink when matching brackets
-set mat=2
+set matchtime=2
 
 " Highlight current line
 set cursorline
