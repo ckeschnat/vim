@@ -301,7 +301,7 @@ if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
     else
         echo "git not found, cannot install Vundle"
     endif
-else
+elseif filereadable(vundle_readme)
     let vundle_installed=1
 endif
 
