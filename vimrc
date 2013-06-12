@@ -13,6 +13,9 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
+" Allow buffer switching without saving
+set hidden
+
 " Display line numbers
 set number
 
@@ -150,6 +153,9 @@ set mat=2
 " Highlight current line
 set cursorline
 
+" Change <leader> to ','
+let mapleader = ','
+
 " Switching between windows
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -174,6 +180,8 @@ map <S-Space> b
 nnoremap j gj
 nnoremap k gk
 
+" Remove highlights
+nmap <silent> <leader>m :silent :nohlsearch<CR>
 
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
@@ -202,9 +210,6 @@ set lazyredraw
 
 " For regular expressions turn magic on
 set magic
-
-" Change <leader> to ','
-let mapleader = ','
 
 " Enable backup
 set backup
@@ -304,6 +309,7 @@ if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
 elseif filereadable(vundle_readme)
     let vundle_installed=1
 endif
+
 
 if vundle_installed==1
     filetype off " required!

@@ -3,6 +3,10 @@ let g:EasyMotion_leader_key = '<Leader>'
 
 " Tell CtrlP to show hidden files
 let g:ctrlp_show_hidden = 1
+" CtrlP Buffer search
+nmap <leader><leader> :CtrlPBuffer<CR>
+nmap <leader>. :CtrlP<CR>
+nmap <leader>/ :CtrlPMRU<CR>
 
 " Set completion type for supertab
 let g:SuperTabDefaultCompletionType = "context"
