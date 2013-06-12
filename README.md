@@ -5,6 +5,8 @@ Create a vimrc with the following content:
     function! MySys()
         return "windows"
     endfunction
+    " Uncomment to disable loading of plugins
+    " let g:disable_all_plugins = 1
 
     source ~/.vim/vimrc
 
