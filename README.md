@@ -1,6 +1,6 @@
 On Windows, rename 'vimfiles' to '.vim' (rename it to '.vim.',
 windows explorer will remove the trailing dot).
-Create a vimrc with the following content:
+Create a vimrc with the following content (on linux 'create_vimrc.sh' can be used):
 
     function! MySys()
         return "windows"
