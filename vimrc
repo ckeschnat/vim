@@ -47,6 +47,11 @@ if has("gui_running")
 
     " GUI options
     set guioptions=aegt
+
+    " Enable mouse
+    set mouse=a
+    " Hide mouse when typing
+    set mousehide
 else
     if &term == 'xterm' || &term == 'screen'
     " Use 256 color terminal
@@ -105,11 +110,6 @@ set tabstop=8
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-
-" Enable mouse
-set mouse=a
-" Hide mouse when typing
-set mousehide
 
 " Enable cursor movement over lines for <BS>, <SPACE>, h, l
 set whichwrap=b,s,h,l
