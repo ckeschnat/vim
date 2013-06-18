@@ -140,7 +140,7 @@ set sessionoptions+=unix,slash
 
 " Set pwd to the directory the currently edited file is in
 " Caveat: saving and loading sessions will not work correctly
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 
 " Prefer unix file format
 set fileformats=unix,dos
@@ -185,6 +185,9 @@ nmap <silent> <leader>m :silent :nohlsearch<CR>
 
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
+
+" Shortcut for projects directory
+nmap <leader>p :lcd C:/Users/ckeschnat/Documents/projects<CR>
 
 if has('statusline')
     " Broken down into easily includeable segments
