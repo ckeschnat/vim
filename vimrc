@@ -186,6 +186,9 @@ nmap <silent> <leader>m :silent :nohlsearch<CR>
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
 
+" Change directory to the on containing the current file
+nmap <leader>l :lcd %:p:h<CR>
+
 " Shortcut for projects directory
 nmap <leader>p :lcd C:/Users/ckeschnat/Documents/projects<CR>
 
