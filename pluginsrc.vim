@@ -53,3 +53,6 @@
     let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 " }
 
+" indent-guides {
+let g:indent_guides_enable_on_vim_startup=1
+" }
