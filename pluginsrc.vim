@@ -56,3 +56,8 @@
 " indent-guides {
 let g:indent_guides_enable_on_vim_startup=1
 " }
+
+" sessions {
+let g:session_autosave="yes"
+let g:session_autoload="yes"
+" }
