@@ -190,7 +190,7 @@ nmap <silent> <leader>m :nohlsearch<CR>
 nmap <silent> <leader>l :lcd %:p:h<CR>
 
 " Shortcut for projects directory
-nmap <leader>p :lcd C:/Users/ckeschnat/Documents/projects<CR>
+nmap <leader>p :lcd $HOME/Documents/projects<CR>
 
 if has('statusline')
     " Broken down into easily includeable segments
