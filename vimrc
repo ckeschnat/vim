@@ -176,6 +176,10 @@ map <C-w><C-l> <C-w>l
 map <Space> w
 map <S-Space> b
 
+" Saving
+nmap <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>a
+
 " Move cursor to next line in display rather than in the file
 nnoremap j gj
 nnoremap k gk
