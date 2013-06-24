@@ -172,10 +172,6 @@ map <C-w><C-j> <C-w>j
 map <C-w><C-k> <C-w>k
 map <C-w><C-l> <C-w>l
 
-" Easier moving by words
-map <Space> w
-map <S-Space> b
-
 " Saving
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>a
