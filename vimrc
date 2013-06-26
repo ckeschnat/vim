@@ -262,10 +262,10 @@ nnoremap j gj
 nnoremap k gk
 
 " Move a line of text using ALT+[jk]
-nmap <M-j> :m +1<CR>
-nmap <M-k> :m -2<CR>
-vmap <M-j> :m +1<CR>
-vmap <M-k> :m -2<CR>
+nmap <S-j> :m +1<CR>
+nmap <S-k> :m -2<CR>
+vmap <S-j> :m +1<CR>
+vmap <S-k> :m -2<CR>
 
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
