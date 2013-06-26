@@ -10,9 +10,7 @@ set nocompatible " Use Vim settings, rather than Vi settings (much better!).
     if has('win32') || has('win64')
       set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
     endif
-"
 set pastetoggle=<F4> " Toggle paste
-"
 
 " ----------------------------------------------------------------------------
 " moving around, searching and patterns
@@ -22,12 +20,10 @@ set whichwrap=b,s,h,l " Enable cursor movement over lines for <BS>, <SPACE>, h, 
 set ignorecase " Case insensitive search
 set smartcase " Case sensitive when upper case present
 set magic " For regular expressions turn magic on
-"
 
 " ----------------------------------------------------------------------------
 " tags
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " displaying text
@@ -39,7 +35,6 @@ set scrolloff=3 " Minimum lines to keep above and below cursor
 set list " Show tabs and trailing spaces
 set listchars=tab:>·,trail:·,extends:#,nbsp:. " with these symbols(eol:$ removed from default)
 set lazyredraw " Don't redraw while executing macros (good performance config)
-"
 
 " ----------------------------------------------------------------------------
 " syntax, highlighting and spelling
@@ -48,7 +43,6 @@ syntax on " Turn on syntax highlighting
 set hlsearch " Highlight all search matches
 filetype plugin indent on " Enable file type detection.
 set cursorline " Highlight current line
-"
 
 " ----------------------------------------------------------------------------
 " multiple windows
@@ -66,23 +60,19 @@ if has('statusline')
     set statusline+=\ [%{getcwd()}]          " Current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
-"
 
 " ----------------------------------------------------------------------------
 " multiple tab pages
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " terminal
 " ----------------------------------------------------------------------------
 set scrolljump=5 " Lines to scroll when cursor leaves screen
-"
 
 " ----------------------------------------------------------------------------
 " using the mouse
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " GUI
@@ -108,12 +98,10 @@ else
         colorscheme distinguished " Colorscheme
     endif
 endif
-"
 
 " ----------------------------------------------------------------------------
 " printing
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " messages and info
@@ -121,12 +109,10 @@ endif
 set showmode " Show the current mode
 set ruler " Show line and column number of cursor in bottom right
 set showcmd " display incomplete commands
-"
 
 " ----------------------------------------------------------------------------
 " selecting text
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " editing text
@@ -136,14 +122,12 @@ set omnifunc=syntaxcomplete#Complete " Set function to be used for omni completi
 set showmatch " Show opening parens
 set matchtime=2 " How many tenths of a second to blink when matching brackets
 set matchpairs+=<:> " list of pairs that match for the "%" command
-"
 
 " ----------------------------------------------------------------------------
 " tabs and indenting
 " ----------------------------------------------------------------------------
 set autoindent " Automatically set the indent of a new line
 set smartindent " Do clever autoindenting
-"
 
 " Expand tabs with 4 spaces
 set tabstop=8
@@ -154,17 +138,14 @@ set expandtab
 " ----------------------------------------------------------------------------
 " folding
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " diff mode
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " mapping
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " reading and writing files
@@ -173,7 +154,6 @@ set fileformats=unix,dos " Prefer unix file format
 set autoread " Set to auto read when a file is changed from the outside
 set backup " Enable backup
 set backupext=.bak " Change the extentions of backup files
-"
 
 " ----------------------------------------------------------------------------
 " command line editing
@@ -188,30 +168,25 @@ if has('persistent_undo')
     set undolevels=1000         " Maximum number of changes that can be undone
     set undoreload=10000 " Maximum number lines to save for undo on a buffer reload
 endif
-"
 
 " ----------------------------------------------------------------------------
 " executing external commands
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " running make and jumping to errors
 " ----------------------------------------------------------------------------
-"
 
 " ----------------------------------------------------------------------------
 " language specific
 " ----------------------------------------------------------------------------
 set iskeyword+=:,-,<,> " Add colons and dashes to keywords (so 'w' for example will jump over them)
-"
 
 " ----------------------------------------------------------------------------
 " multi-byte characters
 " ----------------------------------------------------------------------------
 scriptencoding utf-8
 set encoding=utf-8
-"
 
 " ----------------------------------------------------------------------------
 " various
@@ -243,7 +218,6 @@ autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd B
 
 " File type specifig settings
 autocmd Filetype ruby,html setlocal shiftwidth=2
-"
 
 " ----------------------------------------------------------------------------
 " mappings
@@ -294,7 +268,6 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
-"
 
 " ----------------------------------------------------------------------------
 " helper functions
@@ -311,7 +284,6 @@ function! StripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
-"
 
 " Initialize directories
 function! InitializeDirectories()
@@ -347,7 +319,6 @@ function! InitializeDirectories()
     endfor
 endfunction
 call InitializeDirectories()
-"
 
 " ----------------------------------------------------------------------------
 " Setup Vundle
@@ -395,4 +366,3 @@ if vundle_installed==1
         source ~/.vim/pluginsrc.vim
     endif
 endif
-"
