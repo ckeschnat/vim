@@ -1,111 +1,149 @@
-﻿" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+﻿" ----------------------------------------------------------------------------
+" important
+" ----------------------------------------------------------------------------
+set nocompatible " Use Vim settings, rather than Vi settings (much better!).
+                 " This must be first, because it changes other options as a side effect.
 
-" Windows Compatible {
+" Windows Compatible 
     " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
     " across (heterogeneous) systems easier.
     if has('win32') || has('win64')
       set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
     endif
-" }
+"
+set pastetoggle=<F4> " Toggle paste
+"
 
-scriptencoding utf-8
-set encoding=utf-8
+" ----------------------------------------------------------------------------
+" moving around, searching and patterns
+" ----------------------------------------------------------------------------
+set incsearch " Turn on incremental search
+set whichwrap=b,s,h,l " Enable cursor movement over lines for <BS>, <SPACE>, h, l
+set ignorecase " Case insensitive search
+set smartcase " Case sensitive when upper case present
+set magic " For regular expressions turn magic on
+"
 
-" Allow buffer switching without saving
-set hidden
+" ----------------------------------------------------------------------------
+" tags
+" ----------------------------------------------------------------------------
+"
 
-" Display line numbers
-set number
+" ----------------------------------------------------------------------------
+" displaying text
+" ----------------------------------------------------------------------------
+set number " Display line numbers
+set linebreak " Break lines on words
+set wrap " Wrap lines
+set scrolloff=3 " Minimum lines to keep above and below cursor
+set list " Show tabs and trailing spaces
+set listchars=tab:>·,trail:·,extends:#,nbsp:. " with these symbols(eol:$ removed from default)
+set lazyredraw " Don't redraw while executing macros (good performance config)
+"
 
-" Wrap lines
-set wrap
-" Break lines on words
-set linebreak
+" ----------------------------------------------------------------------------
+" syntax, highlighting and spelling
+" ----------------------------------------------------------------------------
+syntax on " Turn on syntax highlighting
+set hlsearch " Highlight all search matches
+filetype plugin indent on " Enable file type detection.
+set cursorline " Highlight current line
+"
 
-" Allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" ----------------------------------------------------------------------------
+" multiple windows
+" ----------------------------------------------------------------------------
+set hidden " Allow buffer switching without saving
+set laststatus=2 " Always show status line
 
-" Show the current mode
-set showmode
+if has('statusline')
+    " Broken down into easily includeable segments
+    set statusline=%<%f\                     " Filename
+    set statusline+=%w%h%m%r                 " Options
+    " TODO: Gucken ob plugin was taugt
+    "set statusline+=%fugitive#statusline() " Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " Filetype
+    set statusline+=\ [%{getcwd()}]          " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
+"
 
+" ----------------------------------------------------------------------------
+" multiple tab pages
+" ----------------------------------------------------------------------------
+"
+
+" ----------------------------------------------------------------------------
+" terminal
+" ----------------------------------------------------------------------------
+set scrolljump=5 " Lines to scroll when cursor leaves screen
+"
+
+" ----------------------------------------------------------------------------
+" using the mouse
+" ----------------------------------------------------------------------------
+"
+
+" ----------------------------------------------------------------------------
+" GUI
+" ----------------------------------------------------------------------------
 if has("gui_running")
-    " Font and colorscheme
-    set guifont=Consolas:h14:cANSI
-    colorscheme railscasts
+    set guifont=Consolas:h14:cANSI " Font
+    colorscheme railscasts " Colorscheme
 
-    " Disable beep and flash with an autocmd
-    set noerrorbells visualbell t_vb=
-    autocmd GUIEnter * set visualbell t_vb=
+    set noerrorbells visualbell t_vb= " Disable beep
+    autocmd GUIEnter * set visualbell t_vb= " Disable visual flash
 
-    " Maximize gvim window.
-    autocmd GUIEnter * simalt ~x
+    autocmd GUIEnter * simalt ~x " Maximize gvim window.
 
-    " Set width and height
-    set lines=35 columns=150
+    set lines=35 columns=150 " Set width and height
 
-    " GUI options
-    set guioptions=aegt
+    set guioptions=aegt " GUI options
 
-    " Enable mouse
-    set mouse=a
-    " Hide mouse when typing
-    set mousehide
+    set mouse=a " Enable mouse
+    set mousehide " Hide mouse when typing
 else
     if &term == 'xterm' || &term == 'screen'
-    " Use 256 color terminal
-    set t_Co=256
-    colorscheme distinguished
+        set t_Co=256 " Use 256 color terminal
+        colorscheme distinguished " Colorscheme
+    endif
 endif
+"
 
-endif
+" ----------------------------------------------------------------------------
+" printing
+" ----------------------------------------------------------------------------
+"
 
-" Show line and column number of cursor in bottom right
-set ruler
+" ----------------------------------------------------------------------------
+" messages and info
+" ----------------------------------------------------------------------------
+set showmode " Show the current mode
+set ruler " Show line and column number of cursor in bottom right
+set showcmd " display incomplete commands
+"
 
-" Minimum lines to keep above and below cursor
-set scrolloff=3
+" ----------------------------------------------------------------------------
+" selecting text
+" ----------------------------------------------------------------------------
+"
 
-" Turn on syntax highlighting
-syntax on
+" ----------------------------------------------------------------------------
+" editing text
+" ----------------------------------------------------------------------------
+set backspace=indent,eol,start " Allow backspacing over everything in insert mode
+set omnifunc=syntaxcomplete#Complete " Set function to be used for omni completion
+set showmatch " Show opening parens
+set matchtime=2 " How many tenths of a second to blink when matching brackets
+set matchpairs+=<:> " list of pairs that match for the "%" command
+"
 
-" Highlight all search matches
-set hlsearch
-
-" Turn on incremental searc
-set incsearch
-
-" display incomplete commands
-set showcmd
-
-" Better tab completion
-set wildmenu
-set wildignore=*.o,*~,*.pyc
-
-set omnifunc=syntaxcomplete#Complete
-
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-    " Enable file type detection.
-    filetype plugin indent on
-
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it when the position is invalid or when inside an event handler
-    " (happens when dropping a file on gvim).
-    " Also don't do it when the mark is in the first line, that is the default
-    " position when opening a file.
-    autocmd BufReadPost *
-      \ if line("'\"") > 1 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-endif " has("autocmd")
-
-set autoindent
-set smartindent
-
-" Keep big history
-set history=1000
+" ----------------------------------------------------------------------------
+" tabs and indenting
+" ----------------------------------------------------------------------------
+set autoindent " Automatically set the indent of a new line
+set smartindent " Do clever autoindenting
+"
 
 " Expand tabs with 4 spaces
 set tabstop=8
@@ -113,51 +151,103 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Enable cursor movement over lines for <BS>, <SPACE>, h, l
-set whichwrap=b,s,h,l
+" ----------------------------------------------------------------------------
+" folding
+" ----------------------------------------------------------------------------
+"
 
-" Show tabs and trailing spaces (eol:$ removed from default)
-set list
-set listchars=tab:>·,trail:·,extends:#,nbsp:.
+" ----------------------------------------------------------------------------
+" diff mode
+" ----------------------------------------------------------------------------
+"
 
-" Add colons and dashes to keywords (so 'w' for example will jump over them)
-set iskeyword+=:,-,<,>
+" ----------------------------------------------------------------------------
+" mapping
+" ----------------------------------------------------------------------------
+"
 
-" Case insensitive search
-set ignorecase
-" Case sensitive when uc present
-set smartcase
+" ----------------------------------------------------------------------------
+" reading and writing files
+" ----------------------------------------------------------------------------
+set fileformats=unix,dos " Prefer unix file format
+set autoread " Set to auto read when a file is changed from the outside
+set backup " Enable backup
+set backupext=.bak " Change the extentions of backup files
+"
 
-" Always show status line
-set laststatus=2
+" ----------------------------------------------------------------------------
+" command line editing
+" ----------------------------------------------------------------------------
+set wildmenu " Command-line completion shows a list of matches
+set wildignore=*.o,*~,*.pyc " List of patterns to ignore files for file name completion
 
-" Toggle paste
-set pastetoggle=<F4>
+set history=1000 " Keep big history
 
-" See http://vimdoc.sourceforge.net/htmldoc/options.html#%27viminfo%27
-set viminfo='1000,f1,<500,s10,h
+if has('persistent_undo')
+    set undofile                " Persistent undo
+    set undolevels=1000         " Maximum number of changes that can be undone
+    set undoreload=10000 " Maximum number lines to save for undo on a buffer reload
+endif
+"
 
-" Make sessions cross OS compatible
-set sessionoptions+=unix,slash
+" ----------------------------------------------------------------------------
+" executing external commands
+" ----------------------------------------------------------------------------
+"
+
+" ----------------------------------------------------------------------------
+" running make and jumping to errors
+" ----------------------------------------------------------------------------
+"
+
+" ----------------------------------------------------------------------------
+" language specific
+" ----------------------------------------------------------------------------
+set iskeyword+=:,-,<,> " Add colons and dashes to keywords (so 'w' for example will jump over them)
+"
+
+" ----------------------------------------------------------------------------
+" multi-byte characters
+" ----------------------------------------------------------------------------
+scriptencoding utf-8
+set encoding=utf-8
+"
+
+" ----------------------------------------------------------------------------
+" various
+" ----------------------------------------------------------------------------
+set viminfo='1000,f1,<500,s10,h " See http://vimdoc.sourceforge.net/htmldoc/options.html#%27viminfo%27
+set sessionoptions+=unix,slash " Make sessions cross OS compatible
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is the default
+" position when opening a file.
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
 
 " Set pwd to the directory the currently edited file is in
 " Caveat: saving and loading sessions will not work correctly
 " autocmd BufEnter * silent! lcd %:p:h
 
-" Prefer unix file format
-set fileformats=unix,dos
+let mapleader = ',' " Change <leader> to ','
 
-" Show opening parens
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set matchtime=2
+" Jump to the last line when opening log files
+:autocmd BufReadPost *.log normal G
 
-" Highlight current line
-set cursorline
+" Remove trailing whitespaces and ^M chars
+autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
-" Change <leader> to ','
-let mapleader = ','
+" File type specifig settings
+autocmd Filetype ruby,html setlocal shiftwidth=2
+"
 
+" ----------------------------------------------------------------------------
+" mappings
+" ----------------------------------------------------------------------------
 " Switching between windows
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -185,51 +275,11 @@ nnoremap k gk
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Jump to the last line when opening log files
-:autocmd BufReadPost *.log normal G
-
 " Change directory to the on containing the current file
 nmap <silent> <leader>l :lcd %:p:h<CR>
 
 " Shortcut for projects directory
 nmap <leader>p :lcd $HOME/Documents/projects<CR>
-
-if has('statusline')
-    " Broken down into easily includeable segments
-    set statusline=%<%f\                     " Filename
-    set statusline+=%w%h%m%r                 " Options
-    " TODO: Gucken ob plugin was taugt
-    "set statusline+=%{fugitive#statusline()} " Git Hotness
-    set statusline+=\ [%{&ff}/%Y]            " Filetype
-    set statusline+=\ [%{getcwd()}]          " Current dir
-    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-endif
-
-" Lines to scroll when cursor leaves screen
-set scrolljump=5
-
-set matchpairs+=<:>
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Enable backup
-set backup
-" Change the extentions of backup files
-set backupext=.bak
-
-if has('persistent_undo')
-    set undofile                " Persistent undo
-    set undolevels=1000         " Maximum number of changes that can be undone
-    " Maximum number lines to save for undo on a buffer reload
-    set undoreload=10000
-endif
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -244,14 +294,12 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
+"
 
-" Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-
-" File type specifig settings
-autocmd Filetype ruby,html setlocal shiftwidth=2
-
-" Strip whitespace {
+" ----------------------------------------------------------------------------
+" helper functions
+" ----------------------------------------------------------------------------
+" Strip whitespace
 function! StripTrailingWhitespace()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -263,9 +311,9 @@ function! StripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
-" }
+"
 
-" Initialize directories {
+" Initialize directories
 function! InitializeDirectories()
     let parent = $HOME . '/.vim'
     let prefix = 'vim'
@@ -298,10 +346,12 @@ function! InitializeDirectories()
         endif
     endfor
 endfunction
-" }
 call InitializeDirectories()
+"
 
-" Setup Vundle {
+" ----------------------------------------------------------------------------
+" Setup Vundle
+" ----------------------------------------------------------------------------
 " Install Vundle if it is not present
 let vundle_installed=0
 let vundle_fresh=0
@@ -345,8 +395,4 @@ if vundle_installed==1
         source ~/.vim/pluginsrc.vim
     endif
 endif
-" } end setup Vundle
-
-" TODO
-" vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
-nmap <leader>c O" ----------------------------------------------------------------------------<CR><CR><BS> ----------------------------------------------------------------------------<Esc>kA<Space>
+"
