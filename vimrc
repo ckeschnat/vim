@@ -126,15 +126,24 @@ endif
 " ----------------------------------------------------------------------------
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode
 set omnifunc=syntaxcomplete#Complete " Set function to be used for omni completion
+set completeopt+=longest " better omni-complete menu
 set showmatch " Show opening parens
 set matchtime=2 " How many tenths of a second to blink when matching brackets
 set matchpairs+=<:> " list of pairs that match for the "%" command
+set nojoinspaces    " Use only one space after '.' when joining
+                    " lines, instead of two
+if v:version > 703 || v:version == 703 && has("patch541")
+    set formatoptions+=j " delete comment char on second line when
+                       " joining two commented lines
+endif
+
 
 " ----------------------------------------------------------------------------
 " tabs and indenting
 " ----------------------------------------------------------------------------
 set autoindent " Automatically set the indent of a new line
 set smartindent " Do clever autoindenting
+set shiftround " round to 'shiftwidth' for "<<" and ">>"
 
 " Expand tabs with 4 spaces
 set tabstop=8
