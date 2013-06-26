@@ -33,7 +33,8 @@ set linebreak " Break lines on words
 set wrap " Wrap lines
 set scrolloff=3 " Minimum lines to keep above and below cursor
 set list " Show tabs and trailing spaces
-set listchars=tab:>·,trail:·,extends:#,nbsp:. " with these symbols(eol:$ removed from default)
+"set listchars=tab:>·,trail:·,extends:#,nbsp:. " Use these symbols (eol:$ removed from default)
+set listchars=tab:>·,trail:·,extends:#,nbsp:. " Use these symbols (eol:$ removed from default)
 set lazyredraw " Don't redraw while executing macros (good performance config)
 
 " ----------------------------------------------------------------------------
@@ -69,6 +70,7 @@ endif
 " terminal
 " ----------------------------------------------------------------------------
 set scrolljump=5 " Lines to scroll when cursor leaves screen
+set ttyfast " this is the 21st century, people
 
 " ----------------------------------------------------------------------------
 " using the mouse
