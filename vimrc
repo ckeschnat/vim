@@ -33,7 +33,6 @@ set linebreak " Break lines on words
 set wrap " Wrap lines
 set scrolloff=3 " Minimum lines to keep above and below cursor
 set list " Show tabs and trailing spaces
-"set listchars=tab:>·,trail:·,extends:#,nbsp:. " Use these symbols (eol:$ removed from default)
 set listchars=tab:>·,trail:·,extends:#,nbsp:. " Use these symbols (eol:$ removed from default)
 set lazyredraw " Don't redraw while executing macros (good performance config)
 
@@ -207,7 +206,7 @@ set encoding=utf-8
 " ----------------------------------------------------------------------------
 " various
 " ----------------------------------------------------------------------------
-set viminfo='1000,f1,<500,s10,h " See http://vimdoc.sourceforge.net/htmldoc/options.html#%27viminfo%27
+set viminfo='1000,f1,<500,s10,h,% " See http://vimdoc.sourceforge.net/htmldoc/options.html#%27viminfo%27
 set sessionoptions+=unix,slash " Make sessions cross OS compatible
 
 " When editing a file, always jump to the last known cursor position.
@@ -274,6 +273,8 @@ if has('win32') || has('win64')
 else
     nmap <silent> <leader>p :lcd $HOME/projects<CR>
 endif
+" Switch CWD to the directory of the open buffer
+map <silent> <leader>cd :cd %:p:h<cr>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -288,6 +289,22 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<CR>
+map <leader>to :tabonly<CR>
+map <leader>tc :tabclose<CR>
+map <leader>tm :tabmove
+map <leader>tr :tabprevious<CR>
+map <leader>ty :tabnext<CR>
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+vnoremap <silent> * :call VisualSelection('f')<CR>
+vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " ----------------------------------------------------------------------------
 " helper functions

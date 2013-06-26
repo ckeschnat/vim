@@ -4,6 +4,8 @@
 " }
 
 " CtrlP {
+    " Starting directory
+    let g:ctrlp_working_path_mode = 'ra'
     " Tell CtrlP to show hidden files
     let g:ctrlp_show_hidden = 1
     " Mappings
