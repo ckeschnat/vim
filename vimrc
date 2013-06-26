@@ -83,6 +83,8 @@ set showcmd
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 
+set omnifunc=syntaxcomplete#Complete
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
     " Enable file type detection.
@@ -244,7 +246,10 @@ nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<C
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
 
 " Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+
+" File type specifig settings
+autocmd Filetype ruby,html setlocal shiftwidth=2
 
 " Strip whitespace {
 function! StripTrailingWhitespace()
@@ -316,7 +321,6 @@ elseif filereadable(vundle_readme)
     let vundle_installed=1
 endif
 
-
 if vundle_installed==1
     filetype off " required!
     set runtimepath+=~/.vim/bundle/vundle
@@ -342,7 +346,7 @@ if vundle_installed==1
     endif
 endif
 " } end setup Vundle
-set omnifunc=syntaxcomplete#Complete
 
 " TODO
 " vimrc in Sektionen unterteilen, http://amix.dk/vim/vimrc.html
+nmap <leader>c O" ----------------------------------------------------------------------------<CR><CR><BS> ----------------------------------------------------------------------------<Esc>kA<Space>
