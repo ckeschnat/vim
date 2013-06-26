@@ -253,7 +253,11 @@ nmap <silent> <leader>m :nohlsearch<CR>
 nmap <silent> <leader>l :lcd %:p:h<CR>
 
 " Shortcut for projects directory
-nmap <leader>p :lcd $HOME/Documents/projects<CR>
+if has('win32') || has('win64')
+    nmap <silent> <leader>p :lcd $HOME/Documents/projects<CR>
+else
+    nmap <silent> <leader>p :lcd $HOME/projects<CR>
+endif
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
