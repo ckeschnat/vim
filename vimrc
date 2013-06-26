@@ -111,10 +111,15 @@ endif
 set showmode " Show the current mode
 set ruler " Show line and column number of cursor in bottom right
 set showcmd " display incomplete commands
+set confirm " Ask to save buffer instead of failing when executing
+            " commands which close buffers
 
 " ----------------------------------------------------------------------------
 " selecting text
 " ----------------------------------------------------------------------------
+if has('clipboard')
+    set clipboard=unnamed " Yank to the system clipboard by default
+endif
 
 " ----------------------------------------------------------------------------
 " editing text
