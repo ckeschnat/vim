@@ -272,9 +272,6 @@ endif
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Change directory to the on containing the current file
-nmap <silent> <leader>l :lcd %:p:h<CR>
-
 " Shortcut for projects directory
 if has('win32') || has('win64')
     nmap <silent> <leader>p :lcd $HOME/Documents/projects<CR>

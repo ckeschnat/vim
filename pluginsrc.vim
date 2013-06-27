@@ -69,3 +69,6 @@ let g:session_default_to_last=1
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 " }
+
+" TaskList.vim
+map <leader>x <Plug>TaskList
