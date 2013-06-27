@@ -262,10 +262,12 @@ nnoremap j gj
 nnoremap k gk
 
 " Move a line of text using ALT+[jk]
-nmap <S-j> :m +1<CR>
-nmap <S-k> :m -2<CR>
-vmap <S-j> :m +1<CR>
-vmap <S-k> :m -2<CR>
+if has('win32') || has('win64')
+    nmap <M-j> :m +1<CR>
+    nmap <M-k> :m -2<CR>
+    vmap <M-j> :m +1<CR>
+    vmap <M-k> :m -2<CR>
+endif
 
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
