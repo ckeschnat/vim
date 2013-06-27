@@ -289,10 +289,6 @@ nnoremap Y y$
 vnoremap < <gv
 vnoremap > >gv
 
-" Map <Leader>ff to display all lines with keyword under cursor
-" and ask which one to jump to
-nmap <Leader>ff [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
-
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
 
