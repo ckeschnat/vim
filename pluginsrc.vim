@@ -59,12 +59,6 @@
 let g:indent_guides_enable_on_vim_startup=1
 " }
 
-" sessions {
-let g:session_autosave="yes"
-let g:session_autoload="yes"
-let g:session_default_to_last=1
-" }
-
 " rails {
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1

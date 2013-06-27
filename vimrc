@@ -61,6 +61,9 @@ if has('statusline')
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
+set splitright " put new vsplit windows to the right of the current
+set splitbelow " put new split windows to the bottom of the current
+
 " ----------------------------------------------------------------------------
 " multiple tab pages
 " ----------------------------------------------------------------------------
