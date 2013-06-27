@@ -174,8 +174,8 @@ set backupext=.bak " Change the extentions of backup files
 " command line editing
 " ----------------------------------------------------------------------------
 set wildmenu " Command-line completion shows a list of matches
-set wildignore=*.o,*~,*.pyc " List of patterns to ignore files for file name completion
-
+set wildignore=*.o,*~,*.pyc,*.pyo " List of patterns to ignore files for file name completion
+set suffixes+=.pyc,.pyo " Don't autocomplete these filetypes
 set history=1000 " Keep big history
 
 if has('persistent_undo')
@@ -200,7 +200,6 @@ set iskeyword+=:,-,<,> " Add colons and dashes to keywords (so 'w' for example w
 " ----------------------------------------------------------------------------
 " multi-byte characters
 " ----------------------------------------------------------------------------
-scriptencoding utf-8
 set encoding=utf-8
 
 " ----------------------------------------------------------------------------
@@ -278,8 +277,8 @@ if has('win32') || has('win64')
 else
     nmap <silent> <leader>p :lcd $HOME/projects<CR>
 endif
-" Switch CWD to the directory of the open buffer
-map <silent> <leader>cd :cd %:p:h<cr>
+" Change directory to the path of the current file
+map <leader>cd :cd %:p:h<cr>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
@@ -307,6 +306,8 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
+" Quickly open a buffer for scripbble
+map <leader>q :e ~/buffer<cr>
 " ----------------------------------------------------------------------------
 " helper functions
 " ----------------------------------------------------------------------------
