@@ -198,7 +198,7 @@ endif
 " ----------------------------------------------------------------------------
 " language specific
 " ----------------------------------------------------------------------------
-set iskeyword+=:,-,<,> " Add colons and dashes to keywords (so 'w' for example will jump over them)
+set iskeyword+=:,- " Add colons and dashes to keywords (so 'w' for example will jump over them)
 
 " ----------------------------------------------------------------------------
 " multi-byte characters
@@ -309,7 +309,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
-" Quickly open a buffer for scripbble
+" Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
 
 " Record macros with qq<stuff>q, playback with Q
