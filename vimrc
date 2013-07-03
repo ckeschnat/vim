@@ -239,6 +239,9 @@ autocmd Filetype ruby,html setlocal shiftwidth=2
 " ----------------------------------------------------------------------------
 " mappings
 " ----------------------------------------------------------------------------
+" Use \ as , (repeat last f,F,t or T in reverse direction) 
+nnoremap \ ,
+
 " Switching between windows
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
