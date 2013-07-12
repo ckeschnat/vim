@@ -139,6 +139,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
                        " joining two commented lines
 endif
 
+set nrformats= " Dont consider 07 octal and 0x7 hex
 
 " ----------------------------------------------------------------------------
 " tabs and indenting
