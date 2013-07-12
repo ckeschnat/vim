@@ -97,7 +97,7 @@ if has("gui_running")
     set mouse=a " Enable mouse
     set mousehide " Hide mouse when typing
 else
-    if &term == 'xterm' || &term == 'screen'
+    if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color'
         set t_Co=256 " Use 256 color terminal
         colorscheme distinguished " Colorscheme
     endif
