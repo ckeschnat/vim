@@ -326,6 +326,10 @@ nnoremap Q @q
 " Space for command mode
 nnoremap <Space> :
 
+" Scroll through ex history with filtering
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 " ----------------------------------------------------------------------------
 " helper functions
 " ----------------------------------------------------------------------------
