@@ -177,6 +177,7 @@ set backupext=.bak " Change the extentions of backup files
 " ----------------------------------------------------------------------------
 " command line editing
 " ----------------------------------------------------------------------------
+set wildmode=longest,list
 set wildmenu " Command-line completion shows a list of matches
 set wildignore=*.o,*~,*.pyc,*.pyo " List of patterns to ignore files for file name completion
 set suffixes+=.pyc,.pyo " Don't autocomplete these filetypes
