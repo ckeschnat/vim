@@ -231,6 +231,9 @@ let mapleader = ',' " Change <leader> to ','
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
 
+" Ruby syntax for capistrano files
+au BufRead,BufNewFile Capfile set filetype=ruby
+
 " Remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
