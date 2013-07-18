@@ -77,6 +77,8 @@ set ttyfast " this is the 21st century, people
 " ----------------------------------------------------------------------------
 " using the mouse
 " ----------------------------------------------------------------------------
+set mouse=a " Enable mouse
+set mousehide " Hide mouse when typing
 
 " ----------------------------------------------------------------------------
 " GUI
@@ -94,8 +96,6 @@ if has("gui_running")
 
     set guioptions=aegt " GUI options
 
-    set mouse=a " Enable mouse
-    set mousehide " Hide mouse when typing
 else
     if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color'
         set t_Co=256 " Use 256 color terminal
@@ -329,6 +329,26 @@ nnoremap <Space> :
 " Scroll through ex history with filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" Emacs-style editing on the command-line
+" start of line
+cnoremap <C-A>         <Home>
+" back one character
+cnoremap <C-B>         <Left>
+" delete character under cursor
+cnoremap <C-D>         <Del>
+" end of line
+cnoremap <C-E>         <End>
+" forward one character
+cnoremap <C-F>         <Right>
+" recall newer command-line
+cnoremap <C-N>         <Down>
+" recall previous (older) command-line
+cnoremap <C-P>         <Up>
+" back one word
+cnoremap <Esc><C-B>    <S-Left>
+" forward one word
+cnoremap <Esc><C-F>    <S-Right>
 
 " ----------------------------------------------------------------------------
 " helper functions
