@@ -200,7 +200,7 @@ endif
 " ----------------------------------------------------------------------------
 " language specific
 " ----------------------------------------------------------------------------
-set iskeyword+=:,- " Add colons and dashes to keywords (so 'w' for example will jump over them)
+" set iskeyword+=:,- " Add colons and dashes to keywords (so 'w' for example will jump over them)
 
 " ----------------------------------------------------------------------------
 " multi-byte characters
