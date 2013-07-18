@@ -227,8 +227,6 @@ autocmd BufReadPost *
 " Caveat: saving and loading sessions will not work correctly
 " autocmd BufEnter * silent! lcd %:p:h
 
-let mapleader = ',' " Change <leader> to ','
-
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
 
@@ -244,6 +242,9 @@ autocmd Filetype ruby,html setlocal shiftwidth=2
 " ----------------------------------------------------------------------------
 " mappings
 " ----------------------------------------------------------------------------
+" Change <leader> to ','
+let mapleader = ','
+
 " Use \ as , (repeat last f,F,t or T in reverse direction) 
 nnoremap \ ,
 
