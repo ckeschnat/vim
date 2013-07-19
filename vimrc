@@ -321,9 +321,6 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
 
-" Record macros with qq<stuff>q, playback with Q
-nnoremap Q @q
-
 " Space for command mode
 nnoremap <Space> :
 
