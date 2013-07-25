@@ -348,6 +348,9 @@ cnoremap <Esc><C-B>    <S-Left>
 " forward one word
 cnoremap <Esc><C-F>    <S-Right>
 
+" Copy to system clipboard
+map <leader>y "*y
+
 " ----------------------------------------------------------------------------
 " helper functions
 " ----------------------------------------------------------------------------
