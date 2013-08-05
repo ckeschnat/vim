@@ -77,8 +77,10 @@ set ttyfast " this is the 21st century, people
 " ----------------------------------------------------------------------------
 " using the mouse
 " ----------------------------------------------------------------------------
-set mouse=a " Enable mouse
-set mousehide " Hide mouse when typing
+if has("gui_running")
+    set mouse=a " Enable mouse
+    set mousehide " Hide mouse when typing
+endif
 
 " ----------------------------------------------------------------------------
 " GUI
