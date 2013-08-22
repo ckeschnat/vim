@@ -267,10 +267,6 @@ map <C-w><C-j> <C-w>j
 map <C-w><C-k> <C-w>k
 map <C-w><C-l> <C-w>l
 
-" Saving
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>a
-
 " Move cursor to next line in display rather than in the file
 nnoremap j gj
 nnoremap k gk
