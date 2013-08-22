@@ -240,7 +240,7 @@ au BufRead,BufNewFile Capfile set filetype=ruby
 autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " File type specifig settings
-autocmd Filetype ruby,html setlocal shiftwidth=2
+autocmd Filetype ruby,html,eruby setlocal shiftwidth=2
 
 " ----------------------------------------------------------------------------
 " mappings
