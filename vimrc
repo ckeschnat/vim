@@ -237,7 +237,7 @@ autocmd BufReadPost *
 au BufRead,BufNewFile Capfile set filetype=ruby
 
 " Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " File type specifig settings
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
