@@ -56,7 +56,7 @@ if has('statusline')
     set statusline=%<%f\                     " Filename
     set statusline+=%w%h%m%r                 " Options
     " TODO: Gucken ob plugin was taugt
-    "set statusline+=%fugitive#statusline() " Git Hotness
+    set statusline+=%{fugitive#statusline()} " Git Hotness
     set statusline+=\ [%{&ff}/%Y]            " Filefomat / Filetype
     set statusline+=[%{strlen(&fenc)?&fenc:'none'}] " Encoding
     set statusline+=\ [%{getcwd()}]          " Current dir
