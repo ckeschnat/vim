@@ -66,3 +66,6 @@ let g:rubycomplete_rails = 1
 
 " TaskList.vim
 map <leader>x <Plug>TaskList
+
+" Tagbar
+nnoremap <leader>l :TagbarOpenAutoClose<CR>
