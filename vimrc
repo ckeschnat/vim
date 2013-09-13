@@ -55,8 +55,12 @@ if has('statusline')
     " Broken down into easily includeable segments
     set statusline=%<%f\                     " Filename
     set statusline+=%w%h%m%r                 " Options
-    set statusline+=%{fugitive#statusline()} " Git Hotness
-    set statusline+=%{tagbar#currenttag('[%s]','','f')}   " Tagbar
+    if exists(':Git')
+        set statusline+=%{fugitive#statusline()} " Git Hotness
+    endif
+    if exists(':TagbarOpen')
+        set statusline+=%{tagbar#currenttag('[%s]','','f')}   " Tagbar
+    endif
     set statusline+=\ [%{&ff}/%Y]            " Filefomat / Filetype
     set statusline+=[%{strlen(&fenc)?&fenc:'none'}] " Encoding
     set statusline+=\ [%{getcwd()}]          " Current dir
