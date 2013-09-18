@@ -55,10 +55,6 @@
     let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 " }
 
-" indent-guides {
-" let g:indent_guides_enable_on_vim_startup=1
-" }
-
 " rails {
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
