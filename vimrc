@@ -284,6 +284,10 @@ if has('win32') || has('win64')
     vmap <M-k> :m -2<CR>
 endif
 
+" Put search resuls in the center of the window
+nnoremap n nzz
+nnoremap N Nzz
+
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
 
