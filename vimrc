@@ -276,6 +276,9 @@ map <C-w><C-l> <C-w>l
 nnoremap j gj
 nnoremap k gk
 
+" Move to first/last char with H and L
+nnoremap H ^
+nnoremap L g_
 " Move a line of text using ALT+[jk]
 if has('win32') || has('win64')
     nmap <M-j> :m +1<CR>
