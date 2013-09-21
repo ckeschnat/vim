@@ -368,6 +368,9 @@ map <leader>y "*y
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
 
+" Calculator
+inoremap <C-b> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+
 " ----------------------------------------------------------------------------
 " helper functions
 " ----------------------------------------------------------------------------
