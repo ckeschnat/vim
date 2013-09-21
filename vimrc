@@ -279,6 +279,8 @@ nnoremap k gk
 " Move to first/last char with H and L
 nnoremap H ^
 nnoremap L g_
+
+" TODO: Remove? Never used
 " Move a line of text using ALT+[jk]
 if has('win32') || has('win64')
     nmap <M-j> :m +1<CR>
@@ -313,6 +315,7 @@ vnoremap > >gv
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
 
+" TODO: Remove? Never used
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<CR>
 map <leader>to :tabonly<CR>
