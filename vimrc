@@ -260,6 +260,10 @@ augroup END
 " Change <leader> to ','
 let mapleader = ','
 
+" Easier escape
+inoremap jk <esc>
+inoremap kj <esc>
+
 " Use \ as , (repeat last f,F,t or T in reverse direction) 
 nnoremap \ ,
 
