@@ -248,6 +248,7 @@ autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby aut
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
 
 autocmd! BufWritePost vimrc source %
+
 " ----------------------------------------------------------------------------
 " mappings
 " ----------------------------------------------------------------------------
@@ -380,6 +381,39 @@ cnoremap %s/ %s\v
 " Calculator
 inoremap <C-b> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
+
+" ----------------------------------------------------------------------------
+" custom functions
+" ----------------------------------------------------------------------------
+" Ag motions
+" Motions to Ag for things.  Works with pretty much everything, including:
+"
+"   w, W, e, E, b, B, t*, f*, i*, a*, and custom text objects
+" https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc
+nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
+xnoremap <silent> <leader>a :<C-U>call <SID>AgMotion(visualmode())<CR>
+
+nnoremap <bs> :Ag! '\b<c-r><c-w>\b'<cr>
+xnoremap <silent> <bs> :<C-U>call <SID>AgMotion(visualmode())<CR>
+
+function! s:CopyMotionForType(type)
+    if a:type ==# 'v'
+        silent execute "normal! `<" . a:type . "`>y"
+    elseif a:type ==# 'char'
+        silent execute "normal! `[v`]y"
+    endif
+endfunction
+
+function! s:AgMotion(type) abort
+    let reg_save = @@
+
+    call s:CopyMotionForType(a:type)
+
+    execute "normal! :Ag " . shellescape(@@) . "\<cr>"
+
+    let @@ = reg_save
+endfunction
+
 " ----------------------------------------------------------------------------
 " helper functions
 " ----------------------------------------------------------------------------
@@ -504,3 +538,5 @@ if vundle_installed==1
         source ~/.vim/pluginsrc.vim
     endif
 endif
+
+
