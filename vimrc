@@ -247,6 +247,7 @@ autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby aut
 " File type specifig settings
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
 
+autocmd! BufWritePost vimrc source %
 " ----------------------------------------------------------------------------
 " mappings
 " ----------------------------------------------------------------------------
