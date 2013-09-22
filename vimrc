@@ -301,8 +301,13 @@ if has('win32') || has('win64')
 endif
 
 " Put search resuls in the center of the window
-nnoremap n nzz
-nnoremap N Nzz
+" and don't jump with */#
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz<C-o>
+nnoremap <silent> # #zz<C-o>
+nnoremap <silent> g* g*zz<C-o>
+nnoremap <silent> g# g#zz<C-o>
 
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
