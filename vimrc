@@ -247,7 +247,12 @@ autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby aut
 " File type specifig settings
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
 
-autocmd! BufWritePost vimrc source %
+" Automatically reload vimrc when changing vimrc/bundles.vim/pluginsrc.vim
+" has to be in augroup or it will bog down vim, see http://vimbits.com/bits/128
+augroup AutoReloadVimRC
+    au!
+    autocmd! BufWritePost vimrc,bundles.vim,pluginsrc.vim source $MYVIMRC
+augroup END
 
 " ----------------------------------------------------------------------------
 " mappings
@@ -538,5 +543,3 @@ if vundle_installed==1
         source ~/.vim/pluginsrc.vim
     endif
 endif
-
-
