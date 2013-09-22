@@ -372,6 +372,10 @@ vnoremap <S-j> j
 " Sane regexes
 nnoremap / /\v
 vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
+cnoremap s/ s/\v
+cnoremap %s/ %s\v
 
 " Calculator
 inoremap <C-b> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
