@@ -369,6 +369,10 @@ map <leader>y "*y
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
 
+" Sane regexes
+nnoremap / /\v
+vnoremap / /\v
+
 " Calculator
 inoremap <C-b> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
