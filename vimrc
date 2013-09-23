@@ -314,18 +314,6 @@ vnoremap > >gv
 " Edit vimrc with ,v
 nmap <Leader>v :edit ~/.vim/vimrc<CR>
 
-" TODO: Remove? Never used
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<CR>
-map <leader>to :tabonly<CR>
-map <leader>tc :tabclose<CR>
-map <leader>tm :tabmove
-map <leader>tr :tabprevious<CR>
-map <leader>ty :tabnext<CR>
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f')<CR>
