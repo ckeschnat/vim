@@ -349,9 +349,6 @@ cnoremap <Esc><C-B>    <S-Left>
 " forward one word
 cnoremap <Esc><C-F>    <S-Right>
 
-" Copy to system clipboard
-map <leader>y "*y
-
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
 
