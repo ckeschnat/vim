@@ -292,14 +292,11 @@ nnoremap k gk
 nnoremap H ^
 nnoremap L g_
 
-" Put search resuls in the center of the window
-" and don't jump with */#
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz<C-o>
-nnoremap <silent> # #zz<C-o>
-nnoremap <silent> g* g*zz<C-o>
-nnoremap <silent> g# g#zz<C-o>
+" Don't jump with */#
+nnoremap <silent> * *<C-o>
+nnoremap <silent> # #<C-o>
+nnoremap <silent> g* g*<C-o>
+nnoremap <silent> g# g#<C-o>
 
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
