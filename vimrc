@@ -106,7 +106,7 @@ if has("gui_running")
     set guioptions=aegt " GUI options
 
 else
-    if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color'
+    if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color' || &term == 'screen-256color'
         set t_Co=256 " Use 256 color terminal
         colorscheme distinguished " Colorscheme
     endif
