@@ -304,15 +304,6 @@ nnoremap <silent> g# g#zz<C-o>
 " Remove highlights
 nmap <silent> <leader>m :nohlsearch<CR>
 
-" Shortcut for projects directory
-if has('win32') || has('win64')
-    nmap <silent> <leader>p :lcd $HOME/Documents/projects<CR>
-else
-    nmap <silent> <leader>p :lcd $HOME/projects<CR>
-endif
-" Change directory to the path of the current file
-map <leader>cd :cd %:p:h<cr>
-
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
