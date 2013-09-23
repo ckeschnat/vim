@@ -5,11 +5,12 @@ set nocompatible " Use Vim settings, rather than Vi settings (much better!).
                  " This must be first, because it changes other options as a side effect.
 
 " Windows Compatible 
-    " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
-    " across (heterogeneous) systems easier.
-    if has('win32') || has('win64')
-      set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-    endif
+" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+" across (heterogeneous) systems easier.
+if has('win32') || has('win64')
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+
 set pastetoggle=<F4> " Toggle paste
 
 " ----------------------------------------------------------------------------
