@@ -291,15 +291,6 @@ nnoremap k gk
 nnoremap H ^
 nnoremap L g_
 
-" TODO: Remove? Never used
-" Move a line of text using ALT+[jk]
-if has('win32') || has('win64')
-    nmap <M-j> :m +1<CR>
-    nmap <M-k> :m -2<CR>
-    vmap <M-j> :m +1<CR>
-    vmap <M-k> :m -2<CR>
-endif
-
 " Put search resuls in the center of the window
 " and don't jump with */#
 nnoremap <silent> n nzz
