@@ -263,9 +263,6 @@ let mapleader = ','
 inoremap jk <esc>
 inoremap kj <esc>
 
-" Learn to use jk/kj
-inoremap <Esc> <Nop>
-
 " Use \ as , (repeat last f,F,t or T in reverse direction) 
 nnoremap \ ,
 
