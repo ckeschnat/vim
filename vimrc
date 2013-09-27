@@ -319,6 +319,10 @@ map <leader>q :e ~/buffer<cr>
 " Space for command mode
 nnoremap <Space> :
 
+" Ctrl-a used for tmux, so rebind
+nnoremap <C-m> <C-a>
+nnoremap <C-n> <C-x>
+
 " Scroll through ex history with filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
