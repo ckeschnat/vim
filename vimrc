@@ -259,9 +259,8 @@ augroup END
 " Change <leader> to ','
 let mapleader = ','
 
-" Easier escape
-inoremap jk <esc>
-inoremap kj <esc>
+" jj to exit insert mode
+inoremap jj <Esc>
 
 " Use \ as , (repeat last f,F,t or T in reverse direction) 
 nnoremap \ ,
