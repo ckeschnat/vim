@@ -64,4 +64,4 @@ let g:rubycomplete_rails = 1
 map <leader>x <Plug>TaskList
 
 " Tagbar
-nnoremap <leader>l :TagbarOpenAutoClose<CR>
+nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
