@@ -9,9 +9,9 @@
     " Tell CtrlP to show hidden files
     let g:ctrlp_show_hidden = 1
     " Mappings
-    nmap <leader><leader> :CtrlPBuffer<CR>
+    nmap <leader><leader> :CtrlP<CR>
     nmap <leader>. :CtrlPMRU<CR>
-    nmap <leader>/ :CtrlP<CR>
+    nmap <leader>/ :CtrlPBuffer<CR>
 " }
 
 " Supertab {
@@ -65,3 +65,7 @@ map <leader>x <Plug>TaskList
 
 " Tagbar
 nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
+
+" " vimux
+" nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
+" nnoremap <silent> <leader>cv :call VimuxRunCommand("clear; rspec spec")<CR>
