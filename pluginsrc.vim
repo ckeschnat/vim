@@ -1,5 +1,5 @@
 " Easymotion {
-    " Change key for EasyMotion to <leader> (default: <leader><leader>
+    " Change key for EasyMotion to <leader> (default: <leader><leader>)
     let g:EasyMotion_leader_key = '<Leader>'
 " }
 
@@ -66,6 +66,7 @@ map <leader>x <Plug>TaskList
 " Tagbar
 nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
 
-" " vimux
-" nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
-" nnoremap <silent> <leader>cv :call VimuxRunCommand("clear; rspec spec")<CR>
+" vimux
+nnoremap <silent> <leader><Space> :call VimuxRunCommand("cd ~/projects/sample_app/ && clear; rspec spec")<CR>
+nnoremap <silent> <leader>r :call VimuxInspectRunner()<CR>
+nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
