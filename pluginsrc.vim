@@ -67,6 +67,7 @@ map <leader>x <Plug>TaskList
 nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
 
 " vimux
-nnoremap <silent> <leader><Space> :call VimuxRunCommand("cd ~/projects/sample_app/ && clear; rspec spec")<CR>
+" nnoremap <silent> <leader><Space> :call VimuxRunCommand("cd ~/projects/sample_app/ && clear; rspec spec")<CR>
+nnoremap <silent> <leader><Space> :call VimuxRunCommand("clear; rspec spec")<CR>
 nnoremap <silent> <leader>r :call VimuxInspectRunner()<CR>
 nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
