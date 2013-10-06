@@ -246,6 +246,9 @@ autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby aut
 " File type specifig settings
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
 
+" Disable paste when leaving insert mode
+autocmd InsertLeave * set nopaste
+
 " Automatically reload vimrc when changing vimrc/bundles.vim/pluginsrc.vim
 " has to be in augroup or it will bog down vim, see http://vimbits.com/bits/128
 augroup AutoReloadVimRC
