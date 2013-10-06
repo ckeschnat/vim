@@ -43,6 +43,7 @@ syntax on " Turn on syntax highlighting
 set hlsearch " Highlight all search matches
 filetype plugin indent on " Enable file type detection.
 set cursorline " Highlight current line
+set colorcolumn=81 " Mark 81st column
 
 " ----------------------------------------------------------------------------
 " multiple windows
