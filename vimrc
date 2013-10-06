@@ -265,7 +265,11 @@ let mapleader = ','
 
 " jj to exit insert mode
 inoremap jj <Esc>
+
+" ` to exit insert mode
 inoremap ` <Esc>
+" disable ` so that consecutive key presses don't trigger marks
+nnoremap ` <Esc>
 
 " Use \ as , (repeat last f,F,t or T in reverse direction) 
 nnoremap \ ,
