@@ -1,7 +1,6 @@
 " Put bundles here
 Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/neosnippet.vim'
-Bundle 'honza/vim-snippets'
+Bundle 'vim-scripts/UltiSnips'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'matchit.zip'
