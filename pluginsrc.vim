@@ -13,6 +13,10 @@
     nmap <leader>. :CtrlPMRU<CR>
     nmap <leader>/ :CtrlP<CR>
 " }
+
+" Numbers {
+    nnoremap <F3> :NumbersToggle<CR>
+    nnoremap <F4> :NumbersOnOff<CR>
 " }
 
 " Supertab {
@@ -26,9 +30,6 @@
     let g:SuperTabMappingForward = '<C-Space>'
 " }
 
-" Numbers {
-    nnoremap <F3> :NumbersToggle<CR>
-    nnoremap <F4> :NumbersOnOff<CR>
 " }
 
 " neosnippet {
