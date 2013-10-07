@@ -9,9 +9,10 @@
     " Tell CtrlP to show hidden files
     let g:ctrlp_show_hidden = 1
     " Mappings
-    nmap <leader><leader> :CtrlP<CR>
+    nmap <leader><leader> :CtrlPBuffer<CR>
     nmap <leader>. :CtrlPMRU<CR>
-    nmap <leader>/ :CtrlPBuffer<CR>
+    nmap <leader>/ :CtrlP<CR>
+" }
 " }
 
 " Supertab {
