@@ -27,7 +27,7 @@
     " overridden because neosnipped calls <Plug>SuperTabForward
     " if it can't find a snippet (see below). So this is just here to
     " "give" <Tab> to neosnippet
-    let g:SuperTabMappingForward = '<C-Space>'
+    let g:SuperTabMappingForward = '<C-n>'
 " }
 
 " rails {
