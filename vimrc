@@ -362,6 +362,9 @@ vnoremap ? ?\v
 cnoremap s/ s/\v
 cnoremap %s/ %s/\v
 
+" Switch to alternate file
+nnoremap <leader><leader> <C-^>
+
 " ----------------------------------------------------------------------------
 " custom functions
 " ----------------------------------------------------------------------------
