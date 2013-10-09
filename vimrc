@@ -351,6 +351,10 @@ cnoremap <Esc><C-B>    <S-Left>
 " forward one word
 cnoremap <Esc><C-F>    <S-Right>
 
+" Open help in vertical split
+cnoremap help vert help
+cnoremap h vert help
+
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
 
