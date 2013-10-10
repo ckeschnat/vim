@@ -353,6 +353,7 @@ cnoremap <Esc><C-F>    <S-Right>
 
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
+vnoremap <S-k> k
 
 " Sane regexes
 nnoremap / /\v
