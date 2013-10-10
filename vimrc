@@ -92,7 +92,7 @@ endif
 " GUI
 " ----------------------------------------------------------------------------
 if has("gui_running")
-    set guifont=Consolas:h14:cANSI " Font
+    set guifont=Consolas:h13:cANSI " Font
     colorscheme railscasts " Colorscheme
 
     set noerrorbells visualbell t_vb= " Disable beep
