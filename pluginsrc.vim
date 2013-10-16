@@ -44,6 +44,3 @@ nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
 nnoremap <silent> <leader><Space> :call VimuxRunCommand("clear; rspec spec")<CR>
 nnoremap <silent> <leader>r :call VimuxInspectRunner()<CR>
 nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
-
-" YankRing
-nnoremap <silent> <leader>p :YRShow<CR>
