@@ -369,17 +369,6 @@ nnoremap <leader><leader> <C-^>
 " ----------------------------------------------------------------------------
 " custom functions
 " ----------------------------------------------------------------------------
-" Ag motions
-" Motions to Ag for things.  Works with pretty much everything, including:
-"
-"   w, W, e, E, b, B, t*, f*, i*, a*, and custom text objects
-" https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc
-nnoremap <silent> <leader>a :set opfunc=<SID>AgMotion<CR>g@
-xnoremap <silent> <leader>a :<C-U>call <SID>AgMotion(visualmode())<CR>
-
-nnoremap <bs> :Ag! '\b<c-r><c-w>\b'<cr>
-xnoremap <silent> <bs> :<C-U>call <SID>AgMotion(visualmode())<CR>
-
 function! s:CopyMotionForType(type)
     if a:type ==# 'v'
         silent execute "normal! `<" . a:type . "`>y"
