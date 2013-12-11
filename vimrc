@@ -44,7 +44,9 @@ set hlsearch " Highlight all search matches
 filetype plugin indent on " Enable file type detection.
 set cursorline " Highlight current line
 if v:version >= 703
-    set colorcolumn=81 " Mark 81st column
+    " set colorcolumn=81 " Mark 81st column
+    highlight ColorColumn ctermbg=magenta
+    call matchadd('ColorColumn', '\%81v', 100)
 endif
 
 " ----------------------------------------------------------------------------
