@@ -271,13 +271,7 @@ augroup END
 " mappings
 " ----------------------------------------------------------------------------
 " Change <leader> to ','
-let mapleader = ','
-
-" jj to exit insert mode
-inoremap jj <Esc>
-
-" Use \ as , (repeat last f,F,t or T in reverse direction) 
-nnoremap \ ,
+let mapleader = "\<Space>"
 
 " Switching between windows
 noremap <C-h> <C-w>h
@@ -329,9 +323,6 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
-
-" Space for command mode
-nnoremap <Space> :
 
 " Ctrl-a used for tmux, so rebind
 nnoremap <C-m> <C-a>
