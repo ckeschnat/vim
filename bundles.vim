@@ -1,7 +1,7 @@
 " Put bundles here
 Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'matchit.zip'
 Bundle 'ervandew/supertab'

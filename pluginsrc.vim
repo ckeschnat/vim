@@ -1,7 +1,7 @@
-" Easymotion {
-    " Change key for EasyMotion to <leader> (default: <leader><leader>)
-    let g:EasyMotion_leader_key = '<Leader>'
-" }
+" " Easymotion {
+"     " Change key for EasyMotion to <leader> (default: <leader><leader>)
+"     let g:EasyMotion_leader_key = '<Leader>'
+" " }
 
 " CtrlP {
     " Starting directory
@@ -44,3 +44,6 @@ nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
 nnoremap <silent> <leader><Space> :call VimuxRunCommand("clear; rspec spec")<CR>
 nnoremap <silent> <leader>r :call VimuxInspectRunner()<CR>
 nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
+
+" vim-sneak
+let g:sneak#streak = 1
