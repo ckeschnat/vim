@@ -270,10 +270,8 @@ augroup END
 " ----------------------------------------------------------------------------
 " mappings
 " ----------------------------------------------------------------------------
-" Change <leader> to space
+" Change <leader> to ','
 let mapleader = "\<Space>"
-
-nnoremap ; :
 
 " Switching between windows
 noremap <C-h> <C-w>h
