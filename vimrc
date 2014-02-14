@@ -365,14 +365,6 @@ cnoremap <Esc><C-F>    <S-Right>
 vnoremap <S-j> j
 vnoremap <S-k> k
 
-" Sane regexes
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
-cnoremap s/ s/\v
-cnoremap %s/ %s/\v
-
 " Switch to alternate file
 nnoremap <leader><leader> <C-^>
 
