@@ -29,7 +29,9 @@ set tags+=.git/tags
 " displaying text
 " ----------------------------------------------------------------------------
 set number " Display line numbers
-set relativenumber " Show line numbers relative to cursor
+if exists("&relativenumber")
+    set relativenumber " Show line numbers relative to cursor
+endif
 set linebreak " Break lines on words
 set wrap " Wrap lines
 set scrolloff=3 " Minimum lines to keep above and below cursor
