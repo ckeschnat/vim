@@ -47,3 +47,9 @@ nnoremap <silent> <leader>cc :VimuxCloseRunner<CR>
 
 " vim-sneak
 let g:sneak#streak = 1
+
+" Rainbow parenthesis
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
