@@ -10,6 +10,10 @@
     let g:ctrlp_show_hidden = 1
     " Mappings
     nmap <leader>. :CtrlP<CR>
+
+    let g:ctrlp_custom_ignore = {
+      \ 'dir': 'tmp\/',
+      \ }
 " }
 
 " Numbers {
