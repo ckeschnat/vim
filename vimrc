@@ -313,7 +313,7 @@ nnoremap <silent> g* g*<C-o>
 nnoremap <silent> g# g#<C-o>
 
 " Remove highlights
-nmap <silent> <leader>m :nohlsearch<CR>
+nmap <silent> <CR> :nohlsearch<CR>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
