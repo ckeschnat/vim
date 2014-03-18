@@ -312,9 +312,6 @@ nnoremap <silent> # #<C-o>
 nnoremap <silent> g* g*<C-o>
 nnoremap <silent> g# g#<C-o>
 
-" Remove highlights
-nmap <silent> <CR> :nohlsearch<CR>
-
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
@@ -335,6 +332,9 @@ map <leader>q :e ~/buffer<cr>
 
 " Space for command mode
 nnoremap <Space> :
+
+" Remove highlights
+nmap <silent> <CR> :nohlsearch<CR>
 
 " Scroll through ex history with filtering
 cnoremap <C-p> <Up>
