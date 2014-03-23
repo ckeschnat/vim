@@ -61,3 +61,6 @@ au Syntax * RainbowParenthesesLoadBraces
 " vim-expand-region
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+" targets
+let g:targets_pairs = '()b {}B <>a'
