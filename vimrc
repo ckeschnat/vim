@@ -336,6 +336,9 @@ nnoremap <Space> :
 " Remove highlights
 nmap <silent> <CR> :nohlsearch<CR>
 
+" Goto match
+nmap <silent> <BS> %
+
 " Scroll through ex history with filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
