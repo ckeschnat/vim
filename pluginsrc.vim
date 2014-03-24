@@ -20,11 +20,6 @@
     let g:ctrlp_use_caching = 0
 " }
 
-" Numbers {
-    nnoremap <F3> :NumbersToggle<CR>
-    nnoremap <F4> :NumbersOnOff<CR>
-" }
-
 " Supertab {
     " Set completion type for supertab
     let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
