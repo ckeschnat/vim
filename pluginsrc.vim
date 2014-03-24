@@ -36,9 +36,6 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 " }
 
-" TaskList.vim
-map <leader>x <Plug>TaskList
-
 " Tagbar
 nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
 
