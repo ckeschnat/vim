@@ -1,8 +1,10 @@
 " Put bundles here
 Bundle 'kien/ctrlp.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'Trevoke/ultisnips-rspec'
+if has('python')
+    Bundle 'SirVer/ultisnips'
+    Bundle 'honza/vim-snippets'
+    Bundle 'Trevoke/ultisnips-rspec'
+endif
 Bundle 'tomtom/tcomment_vim'
 Bundle 'matchit.zip'
 Bundle 'ervandew/supertab'
