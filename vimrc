@@ -155,6 +155,11 @@ set matchtime=2 " How many tenths of a second to blink when matching brackets
 set matchpairs+=<:> " list of pairs that match for the "%" command
 set nojoinspaces    " Use only one space after '.' when joining
                     " lines, instead of two
+" Don't add the comment prefix when I hit enter or o/O on a comment line.
+" Just setting formatoptions does not work, see
+" http://stackoverflow.com/questions/6076592/vim-set-formatoptions-being-lost
+" http://www.jrwz.net/technical/vi/mytips.html
+autocmd FileType * setlocal formatoptions-=ro
 if v:version > 703 || v:version == 703 && has("patch541")
     set formatoptions+=j " delete comment char on second line when
                        " joining two commented lines
