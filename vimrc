@@ -524,4 +524,5 @@ if vundle_installed==1
     if filereadable($HOME . "/.vim/pluginsrc.vim")
         source ~/.vim/pluginsrc.vim
     endif
+    nmap <leader>bi :BundleInstall<CR>
 endif
