@@ -370,6 +370,10 @@ cnoremap <Esc><C-B>    <S-Left>
 " forward one word
 cnoremap <Esc><C-F>    <S-Right>
 
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
 " Not releasing shift when trying to select multiple lines often happens
 vnoremap <S-j> j
 vnoremap <S-k> k
