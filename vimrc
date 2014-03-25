@@ -370,6 +370,9 @@ vnoremap <S-k> k
 " Switch to alternate file
 nnoremap <leader><leader> <C-^>
 
+" Easier pasting
+map <Leader>p :set paste<CR>o
+
 " ----------------------------------------------------------------------------
 " custom functions
 " ----------------------------------------------------------------------------
