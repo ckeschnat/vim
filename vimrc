@@ -52,6 +52,8 @@ if v:version >= 703
     call matchadd('ColorColumn', '\%81v', 100)
 endif
 
+" Set gutter background to black
+highlight SignColumn ctermbg=black
 " ----------------------------------------------------------------------------
 " multiple windows
 " ----------------------------------------------------------------------------
