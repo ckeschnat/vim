@@ -4,7 +4,7 @@
 set nocompatible " Use Vim settings, rather than Vi settings (much better!).
                  " This must be first, because it changes other options as a side effect.
 
-" Windows Compatible 
+" Windows Compatible
 " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
 " across (heterogeneous) systems easier.
 if has('win32') || has('win64')
@@ -255,7 +255,7 @@ autocmd BufReadPost *
 au BufRead,BufNewFile Capfile set filetype=ruby
 
 " Remove trailing whitespaces and ^M chars
-autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby,css autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby,css,vim autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " File type specifig settings
 autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
@@ -279,7 +279,7 @@ let mapleader = ','
 " jj to exit insert mode
 inoremap jj <Esc>
 
-" Use \ as , (repeat last f,F,t or T in reverse direction) 
+" Use \ as , (repeat last f,F,t or T in reverse direction)
 nnoremap \ ,
 
 " Switching between windows
