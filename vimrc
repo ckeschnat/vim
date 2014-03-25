@@ -328,7 +328,7 @@ vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+map <leader>q :sp ~/buffer<cr>
 
 " Space for command mode
 nnoremap <Space> :
