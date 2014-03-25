@@ -23,12 +23,6 @@
 " Supertab {
     " Set completion type for supertab
     let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-    " Mappings
-    " This isn't necessarily used but the default is
-    " overridden because neosnipped calls <Plug>SuperTabForward
-    " if it can't find a snippet (see below). So this is just here to
-    " "give" <Tab> to neosnippet
-    let g:SuperTabMappingForward = '<C-n>'
 " }
 
 " rails {
