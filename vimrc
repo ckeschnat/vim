@@ -251,10 +251,6 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
-" Set pwd to the directory the currently edited file is in
-" Caveat: saving and loading sessions will not work correctly
-" autocmd BufEnter * silent! lcd %:p:h
-
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
 
