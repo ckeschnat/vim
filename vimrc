@@ -339,6 +339,9 @@ map <leader>q :sp ~/buffer<cr>
 command! Q q " Bind :Q to :q
 command! Qall qall
 
+" Disable Ex mode
+map Q <Nop>
+
 " Space for command mode
 nnoremap <Space> :
 
