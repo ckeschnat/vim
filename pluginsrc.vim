@@ -1,29 +1,26 @@
-" CtrlP {
-    " Starting directory
-    let g:ctrlp_working_path_mode = 'ra'
-    " Tell CtrlP to show hidden files
-    let g:ctrlp_show_hidden = 1
-    " Mappings
-    nmap <leader>. :CtrlP<CR>
+" CtrlP
+" Starting directory
+let g:ctrlp_working_path_mode = 'ra'
+" Tell CtrlP to show hidden files
+let g:ctrlp_show_hidden = 1
+" Mappings
+nmap <leader>. :CtrlP<CR>
 
-    let g:ctrlp_custom_ignore = {
-      \ 'dir': 'tmp\/',
-      \ }
+let g:ctrlp_custom_ignore = {
+            \ 'dir': 'tmp\/',
+            \ }
 
-    " Ignore .git directory
-    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-    let g:ctrlp_use_caching = 0
-" }
+" Ignore .git directory
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
 
-" Supertab {
-    " Set completion type for supertab
-    let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-" }
+" Supertab
+" Set completion type for supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
-" rails {
+" rails
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
-" }
 
 " Tagbar
 nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
