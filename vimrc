@@ -251,6 +251,12 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
+" Don't jump in gitcommits
+autocmd FileType gitcommit normal gg
+
+" Spellcheck and text width in git commit messages
+autocmd FileType gitcommit setlocal spell textwidth=72
+
 " Jump to the last line when opening log files
 :autocmd BufReadPost *.log normal G
 
@@ -265,9 +271,6 @@ autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
 
 " Disable paste when leaving insert mode
 autocmd InsertLeave * set nopaste
-
-" Spellcheck and text width in git commit messages
-autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Automatically reload vimrc when changing vimrc/bundles.vim/pluginsrc.vim
 " has to be in augroup or it will bog down vim, see http://vimbits.com/bits/128
