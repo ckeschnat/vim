@@ -46,6 +46,7 @@ syntax on " Turn on syntax highlighting
 set hlsearch " Highlight all search matches
 filetype plugin indent on " Enable file type detection.
 set cursorline " Highlight current line
+highlight CursorLine term=bold cterm=bold ctermbg=8
 if v:version >= 703
     " set colorcolumn=81 " Mark 81st column
     highlight ColorColumn ctermbg=magenta
