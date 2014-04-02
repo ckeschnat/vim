@@ -22,9 +22,6 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
 
-" Tagbar
-nnoremap <silent> <leader>l :TagbarOpenAutoClose<CR>
-
 " vimux
 " nnoremap <silent> <leader><Space> :call VimuxRunCommand("cd ~/projects/sample_app/ && clear; rspec spec")<CR>
 nnoremap <silent> <leader><Space> :call VimuxRunCommand("clear; rspec spec")<CR>
