@@ -393,6 +393,9 @@ nnoremap <leader><leader> <C-^>
 " Easier pasting
 map <Leader>p :set paste<CR>o
 
+" Insert pry for debugging ruby
+nmap <Leader>d orequire 'pry'; binding.pry<esc>:w<cr>
+
 " ----------------------------------------------------------------------------
 " custom functions
 " ----------------------------------------------------------------------------
