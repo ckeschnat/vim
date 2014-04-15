@@ -7,7 +7,6 @@ if has('python')
 endif
 Bundle 'tomtom/tcomment_vim'
 Bundle 'matchit.zip'
-Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'itchyny/lightline.vim'
 Bundle 'cocopon/lightline-hybrid.vim'
