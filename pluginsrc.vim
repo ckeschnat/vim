@@ -148,3 +148,4 @@ function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
+let g:lightline.colorscheme = 'hybrid'

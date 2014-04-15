@@ -117,7 +117,7 @@ if has("gui_running")
 else
     if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color' || &term == 'screen-256color'
         set t_Co=256 " Use 256 color terminal
-        colorscheme distinguished " Colorscheme
+        colorscheme hybrid " Colorscheme
     endif
     if &term =~ '256color'
         " disable Background Color Erase (BCE) so that color schemes
