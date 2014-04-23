@@ -140,8 +140,6 @@ let g:neocomplete#min_keyword_length = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 1
 let g:neocomplete#data_directory = $HOME.'/.vim/tmp/neocomplete'
 
-" disable the auto select feature by default to speed up writing without
-" obstacles (is optimal for certain situations)
 let g:neocomplete#enable_auto_select = 1
 " toggle the auto select feature
 function! ToggleNeoComplete()
