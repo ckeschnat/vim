@@ -330,7 +330,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Edit vimrc with ,v
-nmap <Leader>v :edit ~/.vim/vimrc<CR>
+nmap <Leader>v :edit ~/.vim/vimrc\|:cd %:h<CR>
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
