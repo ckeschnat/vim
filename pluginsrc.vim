@@ -146,7 +146,7 @@ function! s:syntastic()
 endfunction
 let g:lightline.colorscheme = 'hybrid'
 
-" Neocomplete {{{
+" Neocomplete
 
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -187,4 +187,3 @@ endif
 
 let g:neocomplete#sources#omni#input_patterns.python='[^. \t]\.\w*'
 
-" }}}
