@@ -1,5 +1,4 @@
 " Put bundles here
-Bundle 'kien/ctrlp.vim'
 if has('python')
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
@@ -37,3 +36,5 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'slim-template/vim-slim'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'

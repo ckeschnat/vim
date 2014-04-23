@@ -1,19 +1,3 @@
-" CtrlP
-" Starting directory
-let g:ctrlp_working_path_mode = 'ra'
-" Tell CtrlP to show hidden files
-let g:ctrlp_show_hidden = 1
-" Mappings
-nmap <leader>. :CtrlP<CR>
-
-let g:ctrlp_custom_ignore = {
-            \ 'dir': 'tmp\/',
-            \ }
-
-" Ignore .git directory
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0
-
 " rails
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
@@ -187,3 +171,31 @@ endif
 
 let g:neocomplete#sources#omni#input_patterns.python='[^. \t]\.\w*'
 
+
+" Unite
+let g:unite_enable_start_insert = 1
+let g:unite_split_rule = "botright"
+let g:unite_force_overwrite_statusline = 0
+let g:unite_winheight = 10
+
+call unite#custom_source('file_rec,file_rec/async',
+      \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ 'tmp/',
+      \ ], '\|'))
+
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+
+nnoremap <leader>. :Unite -buffer-name=files -start-insert file_rec/async:!<cr>
+
+autocmd FileType unite call s:unite_settings()
+
+function! s:unite_settings()
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  imap <silent><buffer><expr> <C-x> unite#do_action('split')
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+endfunction
