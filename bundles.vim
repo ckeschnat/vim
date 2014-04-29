@@ -34,7 +34,9 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'vim-scripts/gitignore'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Shougo/neocomplete.vim'
+if has('lua')
+    Bundle 'Shougo/neocomplete.vim'
+endif
 Bundle 'slim-template/vim-slim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
