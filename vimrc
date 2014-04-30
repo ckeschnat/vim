@@ -338,7 +338,11 @@ vnoremap <silent> * :call VisualSelection('f')<CR>
 vnoremap <silent> # :call VisualSelection('b')<CR>
 
 " Quickly open a buffer for scribble
-map <leader>q :sp ~/buffer<cr>
+if has("win32") || has("win16")
+    map <leader>q :sp ~/seafile/mystuff/buffer<cr>
+else
+    map <leader>q :sp ~/buffer<cr>
+endif
 
 command! Q q " Bind :Q to :q
 command! Qall qall
