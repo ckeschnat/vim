@@ -499,50 +499,40 @@ function! VisualSelection(direction) range
     let @" = l:saved_reg
 endfunction
 
-" ----------------------------------------------------------------------------
-" Setup Vundle
-" ----------------------------------------------------------------------------
-" Install Vundle if it is not present
-let vundle_installed=0
-let vundle_fresh=0
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-if !filereadable(vundle_readme) && !exists("g:disable_all_plugins")
-    echo "Installing Vundle..."
-    echo ""
-    call system("git --version")
-    if v:shell_error == 0
-        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-        let vundle_installed=1
-        let vundle_fresh=1
-    else
-        echo "git not found, cannot install Vundle"
+
+" NeoBundle
+if !exists("g:disable_all_plugins")
+    " Auto installing NeoBundle
+    let neobundle_readme=expand($HOME.'/.vim/bundle/neobundle.vim/README.md')
+    if !filereadable(neobundle_readme)
+        echo "Installing NeoBundle.."
+        echo ""
+        silent !mkdir -p $HOME/.vim/bundle
+        silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
     endif
-elseif filereadable(vundle_readme)
-    let vundle_installed=1
-endif
+    " Call NeoBundle
+    if has('vim_starting')
+        set runtimepath+=~/.vim/bundle/neobundle.vim/
+    endif
 
-if vundle_installed==1
-    filetype off " required!
-    set runtimepath+=~/.vim/bundle/vundle
-    call vundle#rc()
+    call neobundle#begin(expand('~/.vim/bundle/'))
 
-    " Let Vundle manage Vundle
-    " required !
-    Bundle 'gmarik/vundle'
+    " better if NeoBundle rules NeoBundle (needed!)
+    NeoBundleFetch 'Shougo/neobundle.vim'
 
     if filereadable($HOME . "/.vim/bundles.vim")
         source ~/.vim/bundles.vim
     endif
 
-    if vundle_fresh==1
-        :BundleInstall
-    endif
+    call neobundle#end()
 
+    " Required:
     filetype plugin indent on
+
+    nmap <leader>bi :NeoBundleCheck<CR>
 
     " Configuration for plugins
     if filereadable($HOME . "/.vim/pluginsrc.vim")
         source ~/.vim/pluginsrc.vim
     endif
-    nmap <leader>bi :BundleInstall<CR>
 endif
