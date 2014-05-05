@@ -516,7 +516,7 @@ if !exists("g:disable_all_plugins")
         if has('win32') || has('win64')
             silent !git clone https://github.com/Shougo/neobundle.vim \%USERPROFILE\%/.vim/bundle/neobundle.vim
         else
-            silent !git clone https://github.com/Shougo/neobundle.vim $HOME/vim/bundle/neobundle.vim
+            silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
         end
     endif
     " Call NeoBundle
