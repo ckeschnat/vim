@@ -39,7 +39,6 @@ if has('lua')
 endif
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',

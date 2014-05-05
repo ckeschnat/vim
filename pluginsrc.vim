@@ -180,6 +180,7 @@ call unite#custom_source('file_rec,file_rec/async',
       \ 'ignore_pattern', join([
       \ '\.git/',
       \ 'tmp/',
+      \ 'bundle/',
       \ ], '\|'))
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
