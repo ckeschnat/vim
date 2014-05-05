@@ -529,6 +529,9 @@ if !exists("g:disable_all_plugins")
     " Required:
     filetype plugin indent on
 
+    " Check for changes in bundles
+    NeoBundleCheck
+
     nmap <leader>bi :NeoBundleCheck<CR>
 
     " Configuration for plugins
