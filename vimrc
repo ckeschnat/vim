@@ -507,8 +507,17 @@ if !exists("g:disable_all_plugins")
     if !filereadable(neobundle_readme)
         echo "Installing NeoBundle.."
         echo ""
-        silent !mkdir -p $HOME/.vim/bundle
-        silent !git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+
+        let directory = $HOME.'/.vim/bundle/'
+        if !isdirectory(directory)
+            silent call mkdir(directory)
+        end
+
+        if has('win32') || has('win64')
+            silent !git clone https://github.com/Shougo/neobundle.vim \%USERPROFILE\%/.vim/bundle/neobundle.vim
+        else
+            silent !git clone https://github.com/Shougo/neobundle.vim $HOME/vim/bundle/neobundle.vim
+        end
     endif
     " Call NeoBundle
     if has('vim_starting')
