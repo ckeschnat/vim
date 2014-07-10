@@ -351,7 +351,7 @@ command! Qall qall
 map Q <Nop>
 
 " Space for command mode
-nnoremap <Space> :
+nnoremap ; :
 
 " Remove highlights
 nmap <silent> <CR> :nohlsearch<CR>
