@@ -397,6 +397,9 @@ nnoremap <leader><leader> <C-^>
 " Easier pasting
 map <Leader>p :set paste<CR>o
 
+" Copy/paste paragraph
+noremap cp yap<S-}>p
+
 " Insert pry for debugging ruby
 nmap <Leader>d orequire 'pry'; binding.pry<esc>:w<cr>
 
