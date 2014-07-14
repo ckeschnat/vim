@@ -52,3 +52,5 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'vimwiki/vimwiki'
+NeoBundle 'junegunn/vim-pseudocl'
+NeoBundle 'junegunn/vim-oblique'
