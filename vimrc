@@ -289,9 +289,6 @@ let mapleader = ','
 " jj to exit insert mode
 inoremap jk <Esc>
 
-" Use \ as , (repeat last f,F,t or T in reverse direction)
-nnoremap \ ,
-
 " Switching between windows
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
