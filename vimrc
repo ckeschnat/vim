@@ -287,7 +287,7 @@ augroup END
 let mapleader = ','
 
 " jj to exit insert mode
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 " Use \ as , (repeat last f,F,t or T in reverse direction)
 nnoremap \ ,
