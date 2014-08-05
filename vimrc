@@ -350,9 +350,6 @@ map Q <Nop>
 " Space for command mode
 nnoremap <Space> :
 
-" Goto match
-nmap <silent> <BS> %
-
 " Scroll through ex history with filtering
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
