@@ -350,9 +350,6 @@ map Q <Nop>
 " Space for command mode
 nnoremap ; :
 
-" Remove highlights
-nmap <silent> <CR> :nohlsearch<CR>
-
 " Goto match
 nmap <silent> <BS> %
 
