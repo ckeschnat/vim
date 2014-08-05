@@ -348,7 +348,7 @@ command! Qall qall
 map Q <Nop>
 
 " Space for command mode
-nnoremap ; :
+nnoremap <Space> :
 
 " Goto match
 nmap <silent> <BS> %
