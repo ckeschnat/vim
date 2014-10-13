@@ -187,6 +187,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
 nnoremap <leader>. :Unite -buffer-name=files -start-insert file_rec/async:!<cr>
+nnoremap <leader>/ :Unite line<cr>
 
 autocmd FileType unite call s:unite_settings()
 
