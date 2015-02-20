@@ -388,9 +388,6 @@ nnoremap <leader><leader> <C-^>
 " Copy/paste paragraph
 noremap cp yap<S-}>p
 
-" Insert pry for debugging ruby
-nmap <Leader>d orequire 'pry'; binding.pry<esc>:w<cr>
-
 " ----------------------------------------------------------------------------
 " custom functions
 " ----------------------------------------------------------------------------
