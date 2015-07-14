@@ -117,7 +117,7 @@ if has("gui_running")
 else
     if &term == 'xterm' || &term == 'screen' || &term == 'xterm-256color' || &term == 'screen-256color'
         set t_Co=256 " Use 256 color terminal
-        colorscheme gruvbox " Colorscheme
+        colorscheme PaperColor " Colorscheme
         set background=dark
     endif
     if &term =~ '256color'
