@@ -269,7 +269,7 @@ au BufRead,BufNewFile Capfile set filetype=ruby
 autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml,eruby,css,vim,zsh,conf autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " File type specifig settings
-autocmd Filetype ruby,html,eruby,scss,yaml setlocal shiftwidth=2
+autocmd Filetype ruby,html,eruby,scss,yaml,sh setlocal shiftwidth=2
 
 " Disable paste when leaving insert mode
 autocmd InsertLeave * set nopaste
