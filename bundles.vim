@@ -51,9 +51,6 @@ NeoBundle 'Shougo/vimproc', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
-NeoBundle 'junegunn/vim-pseudocl'
-NeoBundle 'junegunn/vim-oblique'
-"NeoBundle 'wesQ3/vim-windowswap'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
 NeoBundle 'machakann/vim-textobj-delimited'
 NeoBundle 'thoughtbot/vim-rspec'
